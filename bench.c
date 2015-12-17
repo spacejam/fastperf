@@ -16,7 +16,7 @@
 #include <resolv.h>
 #include <time.h>
 
-#define NOPS      1E4
+#define NOPS      1E5
 #define NTHREADS  50
 #define ADDLEN    1
 #define ACKLEN    2
