@@ -16,7 +16,7 @@
 #include <resolv.h>
 #include <time.h>
 
-#define NOPS      1E8
+#define NOPS      1E4
 #define NTHREADS  50
 #define ADDLEN    1
 #define ACKLEN    2
@@ -33,8 +33,8 @@ void *work()
 
     bzero(&dest, sizeof(dest));
     dest.sin_family = AF_INET;
-    dest.sin_port = htons(5);
-    if ( inet_aton("1.2.3.4", &dest.sin_addr.s_addr) == 0 ) {
+    dest.sin_port = htons(3030);
+    if ( inet_aton("127.0.0.1", &dest.sin_addr.s_addr) == 0 ) {
         perror("1.2.3.4");
         exit(errno);
     }
